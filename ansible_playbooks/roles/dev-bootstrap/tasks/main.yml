@@ -60,4 +60,6 @@
 - name: Install bashrc
   copy: src=.bashrc dest=/var/lib/one/.bashrc owner=oneadmin
 
-
+- name: Set up authorized_keys for the oneadmin user
+  authorized_key: user=oneadmin
+                  key="{{ lookup('file', '/home/jmelis/.ssh/id_dsa.pub') }}"
