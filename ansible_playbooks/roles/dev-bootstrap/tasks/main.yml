@@ -1,0 +1,25 @@
+---
+- name: Enable EPEL
+  copy: src=epel.repo dest=/etc/yum.repos.d/epel.repo owner=root
+
+- name: Install Required Packages
+  yum: name={{ item }} state=installed
+  with_items:
+    - vim
+    - git-core
+    - sudo
+    - bash-completion
+
+- name: Wheel group has sudo access
+  copy: src=wheel.sudoers dest=/etc/sudoers.d/wheel owner=root mode=0600
+
+- name: Install oneadmin user
+  user: name=oneadmin uid=1000 groups="wheel" home=/var/lib/one
+
+- name: Install vimrc
+  copy: src=.vimrc dest=/var/lib/one/.vimrc owner=oneadmin
+
+- name: Install bashrc
+  copy: src=.bashrc dest=/var/lib/one/.bashrc owner=oneadmin
+
+

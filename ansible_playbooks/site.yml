@@ -1,0 +1,16 @@
+---
+- hosts: '{{ target }}'
+  roles:
+    - dev-bootstrap
+
+# - hosts: o200
+
+  # tasks:
+  #     - script: scripts/bootstrap-master.sh {{ ansible_eth0.ipv4.address }} {{ hostvars['o201']['ansible_eth0']['ipv4']['address'] }}
+  #       sudo: yes
+  #       sudo_user: oneadmin
+
+# - hosts: o201
+#   roles:
+#       - mysql-server
+#       - opennebula-slave
