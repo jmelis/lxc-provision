@@ -9,6 +9,44 @@
     - git-core
     - sudo
     - bash-completion
+    - bridge-utils
+    - curl
+    - gcc-c++
+    - genisoimage
+    - libcurl-devel
+    - libvirt
+    - libxml2-devel
+    - log4cpp
+    - log4cpp-devel
+    - mysql-devel
+    - nfs-utils
+    - openssh
+    - openssh-clients
+    - openssh-server
+    - openssl
+    - openssl-devel
+    - pkgconfig
+    - ruby
+    - rubygem-json
+    - rubygem-nokogiri
+    - rubygem-rack
+    - rubygems
+    - rubygem-sequel
+    - rubygem-sinatra
+    - rubygem-sqlite3-ruby
+    - rubygem-thin
+    - rubygem-uuidtools
+    - ruby-mysql
+    - scons
+    - sqlite
+    - sqlite-devel
+    - vconfig
+    - wget
+    - xmlrpc-c
+    - xmlrpc-c-devel
+
+- name: No require tty
+  copy: src=norequiretty dest=/etc/sudoers.d/norequiretty owner=root mode=0600
 
 - name: Wheel group has sudo access
   copy: src=wheel.sudoers dest=/etc/sudoers.d/wheel owner=root mode=0600
