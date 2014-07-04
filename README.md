@@ -1,7 +1,7 @@
 LXC Provision
 =============
 
-This is a repo useful for myself as an OpenNebula developer. I usually need several OpenNebula versions at the same time and LXC is a good match for this requirements.
+This is a repo useful for myself as an OpenNebula developer. I usually need several OpenNebula versions at the same time and LXC is a good match for this.
 
 This repo performs the following actions:
 
