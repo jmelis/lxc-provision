@@ -45,16 +45,12 @@ cat <<EOF > $ONE_HOME/dummy.yaml
 
 - :class: :net
   :name: private
-  :type: fixed
+  :type: IP4
   :bridge: br0
   :dns: 8.8.8.8 8.8.4.4
-  :leases:
-    - 192.168.101.1
-    - 192.168.101.2
-    - 192.168.101.3
-    - 192.168.101.4
-    - 192.168.101.5
-
+  :ar:
+    - :ip: 192.168.101.10
+    - :size: 10
 
 - :class: :template
   :name: test
