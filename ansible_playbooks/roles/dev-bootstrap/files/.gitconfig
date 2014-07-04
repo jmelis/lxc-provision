@@ -1,0 +1,26 @@
+[user]
+	name = Jaime Melis
+	email = jmelis@opennebula.org
+[color]
+	ui = auto
+	wtf = auto
+[push]
+	default = current
+[alias]
+	st      = status
+	s       = status
+    br      = branch
+	co      = checkout
+	nb      = checkout -b
+    cx      = cherry-pick -x
+    files   = diff-tree --no-commit-id --name-only -r
+	slog    = log --abbrev-commit --oneline
+	sl      = log --pretty=\"%C(yellow)%h%Creset %Cblue%an%Creset %s\"
+    hist    = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    lol     = log --oneline --graph --decorate
+    lola    = log --oneline --graph --decorate --all
+	lg      = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+[gui]
+	spellingdictionary = none
+[credential]
+	helper = cache
