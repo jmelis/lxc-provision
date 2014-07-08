@@ -62,4 +62,4 @@ echo "nameserver 172.16.77.1" | sudo tee $ROOTFS/etc/resolv.conf > /dev/null
 # Start Container
 ################################################################################
 
-sudo lxc-start -d -n $NAME
+echo sudo lxc-start -d -n $NAME
