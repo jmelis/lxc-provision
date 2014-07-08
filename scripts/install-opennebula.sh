@@ -17,8 +17,6 @@ git checkout $COMMIT
 scons -j5 mysql=yes
 sudo ./install.sh -l -u oneadmin -g oneadmin
 
-#sed -i 's%^.*EMULATOR.*%EMULATOR = /usr/bin/qemu-system-x86_64%' /etc/one/vmm_exec/vmm_exec_kvm.conf
-
 mkdir -p /var/lib/one/.one
 echo "oneadmin:-" > /var/lib/one/.one/one_auth
 
