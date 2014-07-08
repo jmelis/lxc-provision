@@ -14,6 +14,8 @@ fi
 
 PS1='\[\033[00;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
+export PATH=$HOME/one-tools.git:$PATH
+
 function git-recover() {
     file="$1"
     git checkout $(git rev-list -n 1 HEAD -- "$file")^ -- "$file"
