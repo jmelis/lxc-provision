@@ -8,6 +8,8 @@
     - vim
     - git-core
     - sudo
+    - screen
+    - man
     - bash-completion
     - bridge-utils
     - curl
