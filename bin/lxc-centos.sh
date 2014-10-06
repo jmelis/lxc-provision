@@ -39,9 +39,6 @@ EOF
 # Other System Files
 ################################################################################
 
-sed -i "/^${NAME}$/d" $REPO/ansible_playbooks/hosts
-echo "${NAME}" >> $REPO/ansible_playbooks/hosts
-
 sudo sed -i.bk.$(date '+%Y%m%d%H%M') "/$IP/d" /etc/hosts
 echo "$IP $NAME" | sudo tee -a /etc/hosts > /dev/null
 
