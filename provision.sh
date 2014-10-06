@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOPDIR=$(cd $(dirname `realpath $0`)/..; pwd)
+TOPDIR=$(dirname `realpath $0`)
 
 NAME=$1
 IP=$2
