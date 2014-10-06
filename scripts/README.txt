@@ -1,1 +1,1 @@
-cat install-opennebula.sh | ssh oneadmin@${HOST} bash -s ${COMMIT-master}
+cat install-opennebula.sh | ssh oneadmin@${NAME} bash -s ${COMMIT-master}
